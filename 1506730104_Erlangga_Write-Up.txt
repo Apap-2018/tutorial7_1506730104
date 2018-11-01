@@ -1,0 +1,10 @@
+[Tutorial 7]
+API atau web service sederhananya adalah fitur yang dapat terhubung dengan DB dan front-end, baik itu open-source atau tidak. 
+Postman dapat digunakan untuk mengetest apakah fitur (backend) yang sudah ada sebelumnya, baik itu buatan sendiri maupun open-source, dapat bekerja dengan semestinya di sistem/produk yang kita kembangkan. Yaitu dapat terhubung dengan db dan dapat ditampilkan (di front-end), contohnya data dalam format JSON.
+
+[Latihan]
+1. Membuat FlightController menjadi RestController.
+memanfaatkan GetMapping, DeleteMapping, PostMapping, dan PutMapping agar fitur yang dibuat dapat di-rekognisikan sebagai API, Lalu menggunakan Postman untuk menguji satu-satu fitur yang telah dibuat. 
+
+2. Menggunakan API
+Melakukan registrasi dan membuat App agar bisa mendapatkan laman source airport autocomplete berdasarkan kota-kota yang ada, lalu membuat API berdasarkan laman source tersebut. Memanggil API setiap kali ada request untuk mencari nama-nama bandara yang ada di suatu kota. 
