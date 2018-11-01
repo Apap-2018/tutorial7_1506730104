@@ -1,5 +1,7 @@
 package com.apap.tutorial7.service;
 
+import java.sql.Date;
+import java.util.List;
 import java.util.Optional;
 
 import com.apap.tutorial7.model.FlightModel;
@@ -36,5 +38,18 @@ public class FlightServiceImpl implements FlightService {
 	@Override
 	public Optional<FlightModel> getFlightDetailById(long id) {
 		return flightDb.findById(id);
+	}
+
+	@Override
+	public void updateFlight(long id, String destination, String origin, Date time) {
+		// TODO Auto-generated method stub
+		flightDb.findById(id).get().setDestination(destination);
+		flightDb.findById(id).get().setOrigin(origin);
+		flightDb.findById(id).get().setTime(time);
+	}
+
+	@Override
+	public List<FlightModel> getAllFlight() {
+		return flightDb.findAll();
 	}
 }

@@ -15,6 +15,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * PilotModel
  */
@@ -40,6 +42,7 @@ public class PilotModel implements Serializable {
     private int flyHour;
     
     @OneToMany(mappedBy = "pilot", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<FlightModel> listFlight = new ArrayList<FlightModel>();
 
     /**
