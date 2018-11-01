@@ -54,6 +54,12 @@ public class PilotController {
     	return detail;
     }
     
+    @GetMapping(value="/airport/{nama_kota}")
+    public String getAirport(@PathVariable("nama_kota") String nama_kota) throws Exception {
+    	String path = Setting.airportUrl + nama_kota + "&country=ID";
+    	return restTemplate.getForEntity(path, String.class).getBody();
+    }
+    
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     private String add(Model model) {
         model.addAttribute("pilot", new PilotModel());
